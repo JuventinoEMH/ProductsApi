@@ -1,0 +1,24 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# ASP.NET Core
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# User-specific files
+*.swp
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Azure Web Apps
+.deployment
+.azure/
+
+# VS Code directories
+.vscode/

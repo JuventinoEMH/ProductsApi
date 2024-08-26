@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProductsApi.Models.Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Product List</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="/Products/Create" class="btn btn-primary">Agrega un nuevo producto a la lista </a>
+        </div>
+
+        <h1>Productos que contiene la api</h1>
+        
+        <div class="product-grid">
+            @foreach (var product in Model)
+            {
+                <div class="product-card">
+                    <img src="@product.image" alt="@product.title" class="product-image" />
+                    <div class="product-info">
+                        <h2 class="product-title">@product.title</h2>
+                        <p class="product-description">@product.description</p>
+                        <p class="product-price">$@product.price</p>
+                        <p class="product-brand">Brand: @product.brand</p>
+                        <p class="product-model">Model: @product.model</p>
+                        <p class="product-color">Color: @product.color</p>
+                        <p class="product-category">Category: @product.category</p>
+                        <p class="product-discount">Discount: @product.discount%</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
